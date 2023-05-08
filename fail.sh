@@ -1,7 +1,7 @@
 #!/bin/sh -x
 CONTAINER_RUNTIME=podman
 
-# Start nats in docker
+# Start nats as container
 IMAGE=$($CONTAINER_RUNTIME run -d --rm -p4222:4222 nats --jetstream)
 
 cargo build
